@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Under Construction | INAT Studio</title>
+    <!-- Bootstrap -->
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<section class="hero">
+    <div class="wrapper-content">
+        <div class="container">
+            <h1>Under Construction</h1>
+            <p class="message">We will be here soon!</p>
+            <div class="row">
+                <div class="col-sm-8 col-sm-offset-2">
+                    <!-- Time -->
+                    <div class="wrapper-time">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="time">
+                                    <strong class="day">0</strong>
+                                    <span>Day</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="time">
+                                    <strong class="hours">0</strong>
+                                    <span>Hours</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="time">
+                                    <strong class="min">0</strong>
+                                    <span>Min</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="time">
+                                    <strong class="sec">0</strong>
+                                    <span>Sec</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / Time -->
+                </div>
+            </div>
+            <footer>
+                <small>Made with<span class="glyphicon glyphicon-heart"></span>By<a href="http://inat.in.th">INAT Studio</a></small>
+            </footer>
+        </div>
+    </div>
+</section>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script><script>
+$(function() {
+    var BigDay = new Date("1 Jan 2016, 00:00:00"); // Your Date day mounth years, hr:min:sec
+    var msPerDay = 24 * 60 * 60 * 1000;
+    window.setInterval(function() {
+        var today = new Date();
+        var timeLeft = (BigDay.getTime() - today.getTime());
+        var e_daysLeft = timeLeft / msPerDay;
+        var daysLeft = Math.floor(e_daysLeft);
+        var e_hrsLeft = (e_daysLeft - daysLeft) * 24;
+        var hrsLeft = Math.floor(e_hrsLeft);
+        var e_minsLeft = (e_hrsLeft - hrsLeft) * 60;
+        var minsLeft = Math.floor(e_minsLeft);
+        var e_secsLeft = (e_minsLeft - minsLeft) * 60;
+        var secsLeft = Math.floor(e_secsLeft);
+        var timeString = daysLeft + " : " + hrsLeft + " : " + minsLeft + " : " + secsLeft;
+        $('.day').html(daysLeft);
+        $('.hours').html(hrsLeft);
+        $('.min').html(minsLeft);
+        $('.sec').html(secsLeft);
+    }, 1000);
+})
+</script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+body {
+  background-color: #000;
+  padding: 20px;
+  font-family: 'rsuregular', sans-serif;
+}
+
+.wrapper {
+  padding: 10px;
+  background: #eae6ab;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #eae6ab 10%, #fcbd00 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #eae6ab 10%, #fcbd00 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #eae6ab 10%, #fcbd00 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  height: 100%;
+}
+
+.wrapper .wrapper-content {
+  background-color: #000;
+  height: 100%;
+  padding: 20px 25px 0 25px;
+}
+
+.wrapper .wrapper-content a {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.wrapper .wrapper-content a:hover img {
+  transform: scale(1.1);
+}
+
+.wrapper .wrapper-content img {
+  width: 100%;
+  height: auto;
+  transition: all 0.5s;
+}
+
+.wrapper .wrapper-content .logo-1,
+.wrapper .wrapper-content .logo-3 {
+  margin-top: 25%;
+}
+
+.wrapper .wrapper-content .text {
+  color: #FE8305;
+  font-size: 21px;
+  margin-bottom: 25px;
+}
+
+.wrapper .wrapper-content .text span {
+  font-size: 18px;
+}
+
+/* Large Devices, Wide Screens */
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  body,
+  .wrapper {
+    height: 100%;
+  }
+  .wrapper {
+    margin-top: 0;
+  }
+  .wrapper .wrapper-content {
+    padding: 0 10px;
+  }
+  .wrapper .wrapper-content .logo-1,
+  .wrapper .wrapper-content .logo-3 {
+    margin-top: 0;
+  }
+  .wrapper .wrapper-content .logo-1 {
+    margin: 25px 0;
+  }
+}
+
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
