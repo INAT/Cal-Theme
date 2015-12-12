@@ -1,2 +1,2 @@
 # Cal Theme
-Cal theme is Under constructure page made with bootstrap 3
+Cal theme is Under construction page made with bootstrap 3
